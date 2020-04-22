@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<bookstore>
+  <book category="cooking">
+    <title lang="en">Everyday Italian</title>
+    <author>Giada De Laurentiis</author>
+    <author>Donald Knuth</author>
+    <isbn>9781400052585</isbn>
+    <year>2005</year>
+    <price>30.00</price>
+  </book>
+
+  <book category="computer science">
+    <title lang="zh">计算机程序设计的艺术 (第一卷)
+      <subtitle>基本算法</subtitle>
+      <subtitle>The Art of Computer Programming (volume I)</subtitle>
+    </title>
+    <author>唐纳德</author>
+    <author>Donald Knuth</author>
+    <isbn>9787302058144</isbn>
+    <year>2002</year>
+    <price>40.00</price>
+  </book>
+
+  <book category="children">
+    <title lang="en">Harry Potter</title>
+    <author>J K. Rowling</author>
+    <isbn>9780545010221</isbn>
+    <year>2005</year>
+    <price>29.99</price>
+  </book>
+</bookstore>

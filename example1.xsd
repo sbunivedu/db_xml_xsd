@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+<xs:element name="bookstore">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="book" type="bookType" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:complexType name="bookType" mixed="true">
+  <xs:sequence>
+    <xs:element name="title" type="titleType" />
+    <xs:element name="author" type="xs:string" maxOccurs="unbounded"/>
+    <xs:element name="isbn" type="isbnType" />
+    <xs:element name="year" type="xs:gYear" />
+    <xs:element name="price" type="xs:decimal" />
+  </xs:sequence>
+  <xs:attribute name="category" type="xs:string" />
+</xs:complexType>
+
+<xs:complexType name="titleType" mixed="true">
+  <xs:sequence>
+    <xs:element name="subtitle" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+  </xs:sequence>
+  <xs:attribute name="lang" type="langType" use="required" />
+</xs:complexType>
+
+<xs:simpleType name="isbnType">
+  <xs:restriction base="xs:string">
+    <xs:pattern value="\d{13}" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="langType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="en"/>
+    <xs:enumeration value="fr"/>
+    <xs:enumeration value="zh"/>
+  </xs:restriction>
+</xs:simpleType>
+
+</xs:schema>
